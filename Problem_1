@@ -1,0 +1,21 @@
+# Prompt
+
+A typical American-Style crossword puzzle grid is an NxN matrix with black and white squares, whcih obeys the following rules:
+  -Every white square must be part of an "across" word and a "down" word.
+  -No word can be fewer than three letters long.
+  -Every white square must be reachable from every other white square.
+  -The grid is rotationally symmetric (for example, the colors of the top left and bottom right squares must match).
+  
+Write a program to determine whether a given matrix qualifies as a crossword grid.
+
+# Solution without implementation
+
+I will assume we are given a grid in the form of a data structure supporting some form of 2-dimensional array.
+
+The first check we make is to be sure that the grid is NxN.
+Next we start checking each white square to make sure that it is connected to atleast 2 other white squares.
+    Squares that are isolated or connected to fewer than 2 other white squares make the grid invalid
+Next we assign each white square a number and perform a BFS search through the all white squares.
+    If the total number of white squares is not equal to the number of squares traversed then the grid is invalid.
+For the final check, we can assume that the outside border of squares must all be the same color.
+Therefore, if the outside colors of the squares are not the same then the grid is invalid.
