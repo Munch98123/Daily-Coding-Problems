@@ -1,0 +1,13 @@
+# Prompt
+
+Write a program that determines the smallest number of perfect squares that sum up to N
+
+Examples
+
+N = 4, returns 1 (4)
+N = 17, returns 2 (16+1)
+N = 18, returns 2 (9+9)
+
+# Solution without implementation
+
+The idea behind this problem is simple but the implementation is more exponential.
